@@ -5,6 +5,8 @@ import org.openqa.selenium.WebElement;
 import org.openqa.selenium.support.FindBy;
 import org.openqa.selenium.support.PageFactory;
 
+import java.util.List;
+
 public class DemoqaPages {
 
     public DemoqaPages() {
@@ -21,8 +23,11 @@ public class DemoqaPages {
     public WebElement checkbox;
     @FindBy(xpath="//*[.='Radio Button']")
     public WebElement radioButton;
-    @FindBy(id="item-3")
+    @FindBy(xpath = "(//*[@id=\"item-3\"]/span)[1]")
     public WebElement webTables;
+    @FindBy(xpath = "//span[.='Buttons']")
+    public WebElement Buttons;
+
     @FindBy(id="userName")
     public WebElement fullName;
     @FindBy(id="userEmail")
@@ -37,8 +42,22 @@ public class DemoqaPages {
     public WebElement home;
     @FindBy(id = "yesRadio")
     public WebElement yesRadio;
-    @FindBy(id = " edit-record-1")
+    @FindBy(xpath = "//label[@for='yesRadio']")
+    public WebElement yesRadioXpath;
+    @FindBy(id = "result")
+    public WebElement resultText;
+    @FindBy(id = "edit-record-1")
     public WebElement webTablesEdit;
+    @FindBy(id = "edit-record-2")
+    public WebElement webTablesDelete;
+    @FindBy(id = "searchBox")
+    public WebElement searchBox;
+    @FindBy(xpath = "//div[@class='rt-td']")
+    public WebElement webtablessearchResult;
+    @FindBy(xpath = "(//div[@class='rt-td'])[8]")
+    public WebElement webtable2émeName;
+    @FindBy(id = "delete-record-2")
+    public WebElement webTablesDeleteButton;
     @FindBy(id = "firstName")
     public WebElement firstName;
     @FindBy(id = "lastName")
@@ -55,6 +74,48 @@ public class DemoqaPages {
     public WebElement webTablessubmit;
     @FindBy(xpath = "//p")
     public WebElement yesText;
+    @FindBy(id = "doubleClickBtn")
+    public WebElement doubleClickBtn;
+    @FindBy(id = "rightClickBtn")
+    public WebElement rightClickBtn;
+    @FindBy(xpath ="(//button[@type='button'])[4]")
+    public WebElement clickMe;
+    @FindBy(id = "doubleClickMessage")
+    public WebElement doubleClickMessage;
+    @FindBy(id = "rightClickMessage")
+    public WebElement rightClickMessage;
+    @FindBy(id = "dynamicClickMessage")
+    public WebElement dynamicClickMessage;
+    @FindBy(xpath = "//a")
+    public List<WebElement> allLinks;
+    @FindBy(id="simpleLink")
+    public WebElement homeLink;
+    @FindBy(xpath = "//*[.='Links']")
+    public WebElement linkText;
+    @FindBy(id = "downloadButton")
+    public WebElement downloadButton;
+    @FindBy(id = "uploadFile")
+    public WebElement uploadFile;
+    @FindBy(id = "uploadedFilePath")
+    public WebElement uploadedFilePath;
+    @FindBy(id = "enableAfter")
+    public WebElement enableAfter;
+    @FindBy(id = "colorChange")
+    public WebElement colorChange;
+    @FindBy(id = "visibleAfter")
+    public WebElement visibleAfter;
+
+
+
+
+
+
+
+
+
+
+
+
 
 
 
